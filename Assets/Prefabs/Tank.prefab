@@ -345,8 +345,9 @@ MonoBehaviour:
   BulletPrefab: {fileID: 887242131477268460, guid: 1b8e9009afd72264ea2082e41dc4f620, type: 3}
   fireRate: 1
   bulletSpeed: 3000
-  maxHealth: 5
+  maxHealth: 20
   health: 0
+  isDead: 0
   tank: {fileID: 3171086101404508358}
   tankSpeed: 150
 --- !u!114 &3116089766765964224

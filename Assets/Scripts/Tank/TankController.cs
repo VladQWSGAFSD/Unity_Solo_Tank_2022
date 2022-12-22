@@ -16,20 +16,25 @@ public class TankController : BaseController
 
 
     #endregion
+    
 
     #region Main
     private void Start()
     {
-
+        health = maxHealth;
     }
     // Update is called once per frame
     void Update()
     {
-        Move();
+        //Move();
         MouseFollow();
         TankFire();
 
         Repair();
+    }
+    private void FixedUpdate()
+    {
+        Move();
     }
 
     #endregion
@@ -54,10 +59,7 @@ public class TankController : BaseController
 
     private void Repair()
     {
-        while (health == maxHealth)
-        {
-            health++;
-        }
+             
     }
     private void TankFire()
     {

@@ -20,11 +20,12 @@ public class TurretController : BaseController
     #region Main
     void Start()
     {
+        health = maxHealth;
         target = GameObject.FindGameObjectWithTag("Tank").transform;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         AutomaticFire();
     }
@@ -53,9 +54,6 @@ public class TurretController : BaseController
 
         }
     }
-
-
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
