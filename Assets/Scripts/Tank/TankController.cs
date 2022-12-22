@@ -5,12 +5,10 @@ using UnityEngine;
 public class TankController : BaseController
 {
     #region Variables
-
+    [Header(" Drag and Drop")]
     [SerializeField] GameObject tank;
-    //[SerializeField] float fireRate = 1f;
+    [Header("Variables to change")]
     [SerializeField] float tankSpeed = 150f;
-    //float nextFireTank;
-    //RaycastHit hit;
     float horizontalMove;
     float verticalMove;
 

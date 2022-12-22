@@ -5,15 +5,12 @@ using UnityEngine;
 public class LookTowardMouse : MonoBehaviour
 {
     [Header("References")]
-    //[SerializeField] private Transform cameraHolder;
     [SerializeField] private Transform head;
 
     [Header("Look Settings")]
     [SerializeField] private float sensX = 10f;
-    // [SerializeField] private float sensY = 10f;
 
     private float yRotation;
-    //private float xRotation;
 
     private void Start()
     {
@@ -22,6 +19,11 @@ public class LookTowardMouse : MonoBehaviour
     }
 
     private void Update()
+    {
+    MoveMouse();
+
+    }
+    void MoveMouse()
     {
         float mouseX = Input.GetAxisRaw("Mouse X");
         //float mouseY = Input.GetAxisRaw("Mouse Y");
@@ -33,7 +35,5 @@ public class LookTowardMouse : MonoBehaviour
 
         head.rotation = Quaternion.Euler(0f, yRotation, 0f);
         // cameraHolder.localRotation = Quaternion.Euler(0, yRotation, 0f);
-
     }
-
 }
